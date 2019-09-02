@@ -1,3 +1,5 @@
 mkdir tools
-echo 'export PATH=$PATH:$HOME/tools' >> $HOME/.bashrc
 git clone https://github.com/ytdl-org/youtube-dl.git ydl
+
+echo 'export PATH=$PATH:$HOME/tools:$HOME/ydl/bin' >> $HOME/.bashrc
+echo 'export PYTHONPATH=$HOME/ydl' >> $HOME/.bashrc
