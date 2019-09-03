@@ -1,5 +1,7 @@
-mkdir tools
 git clone https://github.com/ytdl-org/youtube-dl.git ydl
+wget https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64 -O tools/gdrive
+chmod +x tools/gdrive
 
+echo "export PS1='\e[32;46;1m\D{%Y/%m/%d (%a)} \t\e[0m\n\u@\w\$'" >> $HOME/.bashrc
 echo 'export PATH=$PATH:$HOME/tools:$HOME/ydl/bin' >> $HOME/.bashrc
 echo 'export PYTHONPATH=$HOME/ydl' >> $HOME/.bashrc

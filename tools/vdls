@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ "$1" = "" ]; then
+  echo [USAGE] vdls LISTFILE
+  exit
+fi
+
+python3  $HOME/tools/vdls.py $*
+
