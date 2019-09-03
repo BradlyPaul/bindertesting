@@ -1,10 +1,6 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-#
-#
-#
-
-
+# 
 
 import multiprocessing as mp
 import subprocess
@@ -15,30 +11,28 @@ import ctypes
 
 processes_count = 2
 
-
 def download_video(url):
-  cmd ="python3 $HOME/tools/import_ydl_path.py -f best -v --no-check-certificate --write-sub --write-auto-sub  --sub-lang en,zh-Hant  --sub-format srt --convert-subs srt --download-archive yarch.txt -i %s" % url
+  cmd ="python3 $HOME/tools/import_ydl_path.py --no-check-certificate --download-archive yarch.txt -i -x --audio-format mp3 --audio-quality 0 %s" % url 
   print("running cmd: %s" % cmd)
   os.system(cmd)
-  pass
 
 def tryInt(s, defaultValue=0):
   try:
     result = int(s)
   except:
-    return (False, defaultValue)
+    return (False, defauleValue)
   return (True, result)
+
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:
-    print("[usage] vdls FILELIST [PROCESSES_COUNT]")
+    print("[usage] downloading audio only:  vdlsmp3 FILELIST [PROCESSES_COUNT=2]")
     sys.exit(-1)
 
   print ("[DEBUG] processing %s" % sys.argv[1])
 
   f = open(sys.argv[1], "r")
 
-  # skip all comment lines
   lines = []
   for line in f.readlines():
     line = line.rstrip('\n').strip()

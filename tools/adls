@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ "$1" = "" ]; then
+  echo [USAGE] adls LISTFILE
+  exit
+fi
+
+
+python3  $HOME/tools/adls.py $*
+
