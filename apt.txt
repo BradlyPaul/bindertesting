@@ -1,3 +1,5 @@
+emacs
+sbcl
 python3-neovim
 vim
 neovim
