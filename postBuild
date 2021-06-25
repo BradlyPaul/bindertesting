@@ -1,7 +1,17 @@
 git clone https://github.com/ytdl-org/youtube-dl.git ydl
+
 wget https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64 -O tools/gdrive
 chmod +x tools/gdrive
 
+# rust
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+# gdu
+curl -L https://github.com/dundee/gdu/releases/download/v5.1.1/gdu_linux_amd64.tgz | tar -zx -C $HOME/tools/
+mv $HOME/tools/gdu_linux_amd64 $HOME/tools/gdu
+
+echo "alias l='ls -Alhr --sort=time'"   >> $HOME/.bashrc
+echo "alias ll='ls -Alhr --sort=time'"  >> $HOME/.bashrc
 echo "export PS1='\e[32;46;1m\D{%Y/%m/%d (%a)} \t\e[0m\n\u@\w\$'" >> $HOME/.bashrc
 echo 'export PATH=$PATH:$HOME/tools:$HOME/ydl/bin' >> $HOME/.bashrc
 echo 'export PYTHONPATH=$HOME/ydl' >> $HOME/.bashrc
