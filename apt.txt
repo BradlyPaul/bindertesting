@@ -1,10 +1,12 @@
 acpi
 at
+bc
 bison
 bmon
 build-essential
 clisp
 cmake
+cpio
 cscope
 curl
 elinks
@@ -57,6 +59,7 @@ qemu
 rar
 r-base-core
 rlwrap
+rsync
 ruby-dev
 sbcl
 ssh
