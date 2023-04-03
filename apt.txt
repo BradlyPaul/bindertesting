@@ -27,6 +27,7 @@ libcairo2-dev
 libcanberra-gtk3-module
 libcanberra-gtk-module
 libfuse-dev
+lftp
 libgnome2-dev
 libgnomeui-dev
 libgtk2.0-dev
